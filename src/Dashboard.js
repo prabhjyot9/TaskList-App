@@ -32,7 +32,8 @@ const Dashboard = () => {
     <div className="min-h-screen bg-gray-100 mx-auto p-4 overflow-hidden" >
       {tasks.length === 0 ? (
         <div>
-          <h2 className="text-2xl font-bold mb-4">Add Your First Task</h2>
+          <Navbar tasks={tasks} setFilteredTasks={setFilteredTasks} className='mx-auto p-4' />
+          <h2 className="relative inset-5 m-auto w-max h-max text-cente text-2xl mx-auto font-bold mb-4">Add Your First Task</h2>
           <TaskForm updateTasks={updateTasks} tasks={tasks} />
         </div>
       ) : 
