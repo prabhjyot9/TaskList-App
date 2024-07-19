@@ -45,7 +45,7 @@ const TaskItem = ({ task, updateTasks, tasks }) => {
       <div className="flex justify-center gap-12 items-center w-full mt-1">
         <div>
           <p className="text-green-600 text-[18px] font-semibold">Due Date - {formatDate(task.dueDate)}</p>
-          <p className="text-green-600 text-[16px] font-semibold">{remaingTime(task)<0 ? `Overdued by ${Math.abs(remaingTime(task))} Days` : `${remaingTime(task)} Days Remaining`} </p>
+          <p className="text-green-600 text-[16px] font-semibold">{(remaingTime(task)>=0 && task.completed ) ? `Compeleted ${Math.abs(remaingTime(task))} days early`: (remaingTime(task)>=0 && !task.completed) ? `${remaingTime(task)} Days Remaining`: remaingTime(task)<0 && !task.completed ? `Overdue by ${Math.abs(remaingTime(task))} Days` : `Completed` } </p>
         </div>
       </div>
       <div className="w-full mt-5 flex justify-between">
