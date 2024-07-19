@@ -58,7 +58,7 @@ const Dashboard = () => {
               </div>
             </div>
             <div className="tasks-section mt-8">
-              <h2 className="text-2xl font-bold mb-4">Overdued Tasks</h2>
+              <h2 className="text-2xl font-bold mb-4">Overdue Tasks</h2>
               <div className="flex flex-wrap">
                 {overdueTasks.map(task => (
                   <TaskItem key={task.id} task={task} updateTasks={updateTasks} tasks={tasks} />
